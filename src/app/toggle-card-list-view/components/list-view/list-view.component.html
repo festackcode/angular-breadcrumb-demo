@@ -1,0 +1,35 @@
+<div *ngIf="outlet.isActivated == false" [@routeAnimation]="getAnimationData(outlet)">
+  <div class="p-4" *ngFor="let user of users$ | async">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-2">
+            <li><small class="text-muted">Name</small></li>
+            <li>{{ user.name }}</li>
+          </div>
+          <div class="col-md-2">
+            <li><small class="text-muted">Date of birth</small></li>
+            <li>{{ user.dob }}</li>
+          </div>
+          <div class="col-md-2">
+            <li><small class="text-muted">Nationality</small></li>
+            <li>{{ user.nationality }}</li>
+          </div>
+          <div class="col-md-3">
+            <li><small class="text-muted">Highest qualification</small></li>
+            <li>{{ user.highestQualification }}</li>
+          </div>
+          <div class="col-md-3">
+            <li><small class="text-muted">Job Description</small></li>
+            <li>{{ user.jobDescription }}</li>
+          </div>
+          <div class="col-md-12 d-flex p-2 flex-row-reverse">
+            <a [routerLink]="['detail', user.id]" class="btn btn-primary">View detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet #outlet="outlet"></router-outlet>
+

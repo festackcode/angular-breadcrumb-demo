@@ -1,0 +1,12 @@
+li {
+  list-style-type: none;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+/* .flex-adjust > .row > div[class*="col-"] {
+  display: flex;
+  flex: 1 0 auto;
+} */

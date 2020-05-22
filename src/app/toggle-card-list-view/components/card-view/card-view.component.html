@@ -1,0 +1,36 @@
+
+<div *ngIf="data.length > 0">
+  <div class="card-deck p-4">
+      <div class="card" *ngFor="let i of data">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6 pb-2">
+              <li><small class="text-muted">Name</small></li>
+              <li>{{ i.name }}</li>
+            </div>
+            <div class="col-md-6 pb-2">
+              <li><small class="text-muted">Date of birth</small></li>
+              <li>{{ i.dob }}</li>
+            </div>
+            <div class="col-md-6 pb-2">
+              <li><small class="text-muted">Nationality</small></li>
+              <li>{{ i.nationality }}</li>
+            </div>
+            <div class="col-md-6 pb-2">
+              <li><small class="text-muted">Highest qualification</small></li>
+              <li>{{ i.highestQualification }}</li>
+            </div>
+            <div class="col-md-12">
+              <li><small class="text-muted">Job Description</small></li>
+              <li>{{ i.jobDescription }}</li>
+            </div>
+            <div class="col-md-12 d-flex p-2 flex-row-reverse">
+              <a href="#" class="btn btn-primary">View detail</a>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+    
+  </div>
+</div>
